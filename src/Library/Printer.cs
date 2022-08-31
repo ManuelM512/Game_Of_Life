@@ -3,18 +3,12 @@ using System.IO;
 
 namespace PII_Game_Of_Life{
     public class Printer{
-        bool[,] b;
-        int width;
-        int height;
-
-        public GameBoard Tablero{get; set;}
         public Printer(GameBoard tablero){
-            this.Tablero=tablero;
             while (true)
             {
-                b=this.Tablero.gameBoard;
-                width= this.Tablero.boardWidth;
-                height= this.Tablero.boardHeight;
+                bool[,] b=tablero.gameBoard;
+                int width= tablero.boardWidth;
+                int height= tablero.boardHeight;
                 Console.Clear();
                 StringBuilder s = new StringBuilder();
                 for (int y = 0; y<height;y++)
@@ -33,12 +27,9 @@ namespace PII_Game_Of_Life{
                     s.Append("\n");
                 }
                 Console.WriteLine(s.ToString());
-                this.Tablero.NewGen();
+                tablero.NewGen();
                 Thread.Sleep(300);
             }
-        }
-        public void Print(){
-            
         }
     }
 

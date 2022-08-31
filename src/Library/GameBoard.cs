@@ -8,11 +8,10 @@ namespace PII_Game_Of_Life
         public int boardWidth{get;}
         public int boardHeight{get;}
 
-        public GameBoard(){
-            Reader lector = new Reader();
-            gameBoard = lector.board;
-            boardWidth = gameBoard.GetLength(0);
-            boardHeight = gameBoard.GetLength(1);
+        public GameBoard(bool [,] gameBoard){
+            this.gameBoard = gameBoard;
+            this.boardWidth = gameBoard.GetLength(0);
+            this.boardHeight = gameBoard.GetLength(1);
             }   
         
         public void NewGen(){

@@ -7,7 +7,8 @@ namespace PII_Game_Of_Life
         static void Main(string[] args)
         {
             //Que el gameboard pueda ser creado por diferentes maneras
-            GameBoard tablero = new GameBoard();
+            Reader lector = new Reader();
+            GameBoard tablero = new GameBoard(lector.board);
             Printer impr = new Printer(tablero);
         }
     }
