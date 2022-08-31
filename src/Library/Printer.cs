@@ -12,9 +12,9 @@ namespace PII_Game_Of_Life{
             this.Tablero=tablero;
             while (true)
             {
-                bool[,] b=this.Tablero.gameBoard;
-                int width= this.Tablero.boardWidth;
-                int height= this.Tablero.boardHeight;
+                b=this.Tablero.gameBoard;
+                width= this.Tablero.boardWidth;
+                height= this.Tablero.boardHeight;
                 Console.Clear();
                 StringBuilder s = new StringBuilder();
                 for (int y = 0; y<height;y++)
